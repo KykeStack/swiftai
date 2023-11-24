@@ -1,0 +1,9 @@
+gradio
+
+torch 
+opencv-python 
+Pillow
+
+git+https://github.com/openai/CLIP.git
+
+git+https://github.com/facebookresearch/segment-anything.git
