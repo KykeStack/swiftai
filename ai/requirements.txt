@@ -1,4 +1,4 @@
-gradio
+gradio==3.48.0
 
 torch 
 opencv-python 
