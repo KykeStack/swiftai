@@ -27,7 +27,7 @@ def segment_image(image, segmentation_mask):
     segmented_image = Image.fromarray(segmented_image_array)
     black_image = Image.new("RGB", image.size, (0, 0, 0))
     transparency_mask = np.zeros_like(segmentation_mask, dtype=np.uint8)
-    transparency_mask[segmentation_mask] = 155
+    transparency_mask[segmentation_mask] = 20
     transparency_mask_image = Image.fromarray(transparency_mask, mode='L')
     black_image.paste(segmented_image, mask=transparency_mask_image)
     return black_image
@@ -64,7 +64,7 @@ def pred(search_string, open_cv_image):
         cropped_boxes.append(segment_image(img, mask["segmentation"]).crop(convert_box_xywh_to_xyxy(mask["bbox"])))
 
     scores = retriev(cropped_boxes, search_string)
-    indices = get_indices_of_values_above_threshold(scores, 0.05)
+    indices = get_indices_of_values_above_threshold(scores, 0.5)
 
     segmentation_masks = []
 
@@ -95,7 +95,7 @@ def process_frame(frame, labels, c):
     return np.array(img)[:, :, ::-1] 
 
 def main(input_path, output_path, labels):
-    skip = 30
+    skip = 1
     cap = cv2.VideoCapture(input_path)
     frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
@@ -108,7 +108,7 @@ def main(input_path, output_path, labels):
         pbar.update(1)
         
         ret, frame = cap.read()
-        if c % 30 == 0:
+        if c % skip == 0:
             if not ret:
                 break
 
