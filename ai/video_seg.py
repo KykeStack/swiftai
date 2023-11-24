@@ -12,6 +12,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # preso spunto da https://github.com/maxi-w/CLIP-SAM/blob/main/main.ipynb
 mask_generator = SamAutomaticMaskGenerator(build_sam(checkpoint="./models/sam_vit_h_4b8939.pth").to(device=device))
 model, preprocess = clip.load("ViT-B/32", device=device)
+t = 0.5
+opacity = 20
 
 def convert_box_xywh_to_xyxy(box):
     x1 = box[0]
@@ -27,7 +29,7 @@ def segment_image(image, segmentation_mask):
     segmented_image = Image.fromarray(segmented_image_array)
     black_image = Image.new("RGB", image.size, (0, 0, 0))
     transparency_mask = np.zeros_like(segmentation_mask, dtype=np.uint8)
-    transparency_mask[segmentation_mask] = 20
+    transparency_mask[segmentation_mask] = opacity
     transparency_mask_image = Image.fromarray(transparency_mask, mode='L')
     black_image.paste(segmented_image, mask=transparency_mask_image)
     return black_image
@@ -64,7 +66,7 @@ def pred(search_string, open_cv_image):
         cropped_boxes.append(segment_image(img, mask["segmentation"]).crop(convert_box_xywh_to_xyxy(mask["bbox"])))
 
     scores = retriev(cropped_boxes, search_string)
-    indices = get_indices_of_values_above_threshold(scores, 0.5)
+    indices = get_indices_of_values_above_threshold(scores, t)
 
     segmentation_masks = []
 
