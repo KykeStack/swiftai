@@ -84,30 +84,37 @@ def pred(search_string, open_cv_image):
     # return result_image, overlay_image
     return result_image
 
-def process_frame(frame, labels):
+def process_frame(frame, labels, c):
     # Esempio di funzione che potrebbe elaborare ogni frame
     # Puoi modificare questa parte per adattarla alle tue esigenze
     # Ad esempio, potresti voler aggiungere del testo ai frame utilizzando le etichette fornite
     # for label in labels:
     #     cv2.putText(frame, label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-    return np.array(pred(labels[0], frame))[:, :, ::-1] 
+    img = pred(labels[0], frame)
+    img.save(f'video/frames/frame_{c}.png')
+    return np.array(img)[:, :, ::-1] 
 
 def main(input_path, output_path, labels):
+    skip = 30
     cap = cv2.VideoCapture(input_path)
     frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter(output_path, fourcc, 20.0, (int(cap.get(3)), int(cap.get(4))))
 
     pbar = tqdm(total=frame_count)
+    c = 0
 
     while cap.isOpened():
         pbar.update(1)
+        
         ret, frame = cap.read()
-        if not ret:
-            break
+        if c % 30 == 0:
+            if not ret:
+                break
 
-        frame = process_frame(frame, labels)
-        out.write(frame)
+            frame = process_frame(frame, labels, c)
+            out.write(frame)
+        c += 1
     
     pbar.close()
     cap.release()
