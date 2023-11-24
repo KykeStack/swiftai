@@ -51,6 +51,7 @@ def pred(search_string, img):
     original_image = img.copy()
 
     open_cv_image = np.array(img)[:, :, ::-1] 
+    print(open_cv_image, open_cv_image.shape)
     masks = mask_generator.generate(open_cv_image)
     # Cut out all masks
     cropped_boxes = []
