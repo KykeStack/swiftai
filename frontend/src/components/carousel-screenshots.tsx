@@ -10,6 +10,14 @@ const carouselImagesData = [
   { source: 'https://lzpjglicedvhpzcyafkn.supabase.co/storage/v1/object/sign/Horoscope_Images/frame-fox_5.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJIb3Jvc2NvcGVfSW1hZ2VzL2ZyYW1lLWZveF81LmpwZyIsImlhdCI6MTcwMDkxODYzMywiZXhwIjoxNzEzODc4NjMzfQ.7FByxih_fI78Ci9b-V-vegh-tua8WKlEPywe9HCYzSA&t=2023-11-25T13%3A23%3A54.114Z', index: 5 }
 ]
 
+// const carouselImagesData = [
+//   { source: 'https://lzpjglicedvhpzcyafkn.supabase.co/storage/v1/object/sign/Horoscope_Images/chighiale_1.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJIb3Jvc2NvcGVfSW1hZ2VzL2NoaWdoaWFsZV8xLmpwZyIsImlhdCI6MTcwMDkyMDYxMywiZXhwIjoxNzEzODgwNjEzfQ.sg_V6VB4pXTi1nTSpMyc6ARxwDNFQYYs4F0dEBPSpO8&t=2023-11-25T13%3A56%3A54.772Z', index: 0 },
+//   { source: 'https://lzpjglicedvhpzcyafkn.supabase.co/storage/v1/object/sign/Horoscope_Images/chighiale_2.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJIb3Jvc2NvcGVfSW1hZ2VzL2NoaWdoaWFsZV8yLmpwZyIsImlhdCI6MTcwMDkyMDYzMSwiZXhwIjoxNzEzODgwNjMxfQ.Hzkcw40kpQpNeAsaN0k7gWkeWnsDWFZZ2IEI9fA9tSM&t=2023-11-25T13%3A57%3A12.380Z', index: 1 },
+//   { source: 'https://lzpjglicedvhpzcyafkn.supabase.co/storage/v1/object/sign/Horoscope_Images/chighiale_3.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJIb3Jvc2NvcGVfSW1hZ2VzL2NoaWdoaWFsZV8zLmpwZyIsImlhdCI6MTcwMDkyMDY0NSwiZXhwIjoxNzEzODgwNjQ1fQ.0tbJQZ6EUYNJI8RJ72SmAYAzrX02y3wGu8v-5eo9Uns&t=2023-11-25T13%3A57%3A25.900Z', index: 2 },
+//   { source: 'https://lzpjglicedvhpzcyafkn.supabase.co/storage/v1/object/sign/Horoscope_Images/chighiale_4.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJIb3Jvc2NvcGVfSW1hZ2VzL2NoaWdoaWFsZV80LmpwZyIsImlhdCI6MTcwMDkyMDY1OSwiZXhwIjoxNzEzODgwNjU5fQ.6cQFogM1lt7sgz5paMxy8x-0RnqNsh6-usFG8lifHZU&t=2023-11-25T13%3A57%3A40.232Z', index: 3 },
+//   { source: 'https://lzpjglicedvhpzcyafkn.supabase.co/storage/v1/object/sign/Horoscope_Images/chighiale_5.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJIb3Jvc2NvcGVfSW1hZ2VzL2NoaWdoaWFsZV81LmpwZyIsImlhdCI6MTcwMDkyMDY3MSwiZXhwIjoxNzEzODgwNjcxfQ.xcNV9x9Xhjq1RxnoTHUE-zHQ_4sGZXCoSlBGCHrE2bk&t=2023-11-25T13%3A57%3A52.520Z', index: 4 }
+// ]
+
 const CarouselScreenshots: Component<{}> = (props) => {
   const [carouselIndex, setcarouselIndex] = createSignal(0)
   const [listImages] = createSignal(carouselImagesData)

@@ -2,7 +2,7 @@ import { Component, createSignal } from 'solid-js'
 import './styles/main.css'
 
 const SearchConfigBar: Component<{}> = (props) => {
-  const [clickFunctionality, setclickFunctionality] = createSignal('Volpe')
+  const [clickFunctionality, setclickFunctionality] = createSignal('______')
   const handelInput = (e: Event) => {
     // @ts-ignore
     setclickFunctionality(e.target?.value ?? 'Volpe')
@@ -49,7 +49,7 @@ const SearchConfigBar: Component<{}> = (props) => {
             Rana
           </button>
           <button onClick={() => setclickFunctionality('Bisci')} class='inline-flex items-center justify-center gap-4 p-1 rounded-xl text-xl w-20  ffitont-medium bg-[#E36E40] text-[#FFF] dark:bg-blue-800/30 dark:text-blue-500'>
-            Bisci
+            Biscia
           </button>
           <button onClick={() => setclickFunctionality('Cane')} class='inline-flex items-center justify-center gap-4 p-1 rounded-xl text-xl w-20 ffitont-medium bg-[#E36E40] text-[#FFF] dark:bg-blue-800/30 dark:text-blue-500'>
             Cane
