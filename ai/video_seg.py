@@ -12,7 +12,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # preso spunto da https://github.com/maxi-w/CLIP-SAM/blob/main/main.ipynb
 mask_generator = SamAutomaticMaskGenerator(build_sam(checkpoint="./models/sam_vit_h_4b8939.pth").to(device=device))
 model, preprocess = clip.load("ViT-B/32", device=device)
-t = 0.5
+t = 0.02
 opacity = 20
 
 def convert_box_xywh_to_xyxy(box):
