@@ -5,6 +5,7 @@ import CarouselScreenshots from './carousel-screenshots'
 import VideoPreviewBox from './video-preview-box'
 import DataSection from './data-section'
 import ProfileButton from './profile-button'
+import DateAndTime from './date-time-section'
 
 const Body: Component<{}> = (props) => {
   return (
@@ -19,6 +20,7 @@ const Body: Component<{}> = (props) => {
         <ProfileButton />
         <VideoPreviewBox />
         <DataSection />
+        <DateAndTime />
       </div>
     </div>
   )
