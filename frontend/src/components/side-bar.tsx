@@ -2,7 +2,7 @@ import { Component } from 'solid-js'
 
 const SideBar: Component<{}> = (props) => {
   return (
-    <div id='docs-sidebar' class='rounded-tr-[5rem] duration-300 transform z-[60] w-64 h-screen bg-[#E36E40] border-e border-gray-200 pt-7 pb-10 overflow-y-auto lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-gray-800 dark:border-gray-700'>
+    <div id='docs-sidebar' class='rounded-tr-[5rem] duration-300 transform z-[60] w-80 h-screen bg-[#E36E40] border-e border-gray-200 pt-7 pb-10 overflow-y-auto lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 dark:bg-gray-800 dark:border-gray-700'>
       <div class='px-6'>
         <div class='mt-8'>
           <svg xmlns='http://www.w3.org/2000/svg' width='168' height='76' viewBox='0 0 168 76' fill='none'>

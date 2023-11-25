@@ -3,7 +3,7 @@ import './styles/main.css'
 
 const CarouselScreenshots: Component<{}> = (props) => {
   return (
-    <div class='ml-10 mt-16 w-full h-50 flex flex-col bg-[#F2F2F2] border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
+    <div class='ml-10 mt-10 w-full h-50 flex flex-col bg-[#F2F2F2] border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
       <div class='p-4 m-2 flex flex-col gap-2'>
         <h3 class='text-2xl font-bold text-gray-800 dark:text-white'>
           Ricerca Elementi
