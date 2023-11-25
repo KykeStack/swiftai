@@ -1,4 +1,4 @@
-gradio
+gradio==3.48.0
 
 torch 
 opencv-python 
@@ -7,3 +7,5 @@ Pillow
 git+https://github.com/openai/CLIP.git
 
 git+https://github.com/facebookresearch/segment-anything.git
+
+tqdm
