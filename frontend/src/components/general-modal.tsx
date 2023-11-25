@@ -18,7 +18,7 @@ const GeneralModal: Component<{}> = (props) => {
 
         <div class='absolute top-12 left-12 border border-white p-2'>
           <div class='relative flex gap-2 items-center'>
-            <h1>Live</h1>
+            <h1 class='text-gray-400'>Live</h1>
             <span class='w-3.5 h-3.5 bg-red-400 border-2 border-white dark:border-gray-800 rounded-full' />
           </div>
         </div>

@@ -10,6 +10,7 @@ const VideoPreviewBox: Component<{}> = (props) => {
         </h3>
         <div class='flex flex-row gap-4 bg-transparent'>
           <div class='flex flex-col gap-4 w-[60%]'>
+
             <video
               onClick={() => { setShowModal(true) }}
               class='

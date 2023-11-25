@@ -143,7 +143,7 @@ const SideBar: Component<{}> = (props) => {
 
               <svg class='hs-accordion-active:block ms-auto hidden w-4 h-4  text-white group-hover:text-gray-500 dark:text-gray-400' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m18 15-6-6-6 6' /></svg>
 
-              <span class='inline-flex items-center py-0.5 px-1.5 rounded-full text-xs font-medium bg-white text-black font-bold'>5</span>
+              <span class='inline-flex items-center py-0.5 px-1.5 rounded-full text-xs bg-white text-black font-bold'>5</span>
               <svg class='hs-accordion-active:hidden ms-auto block w-4 h-4  text-white group-hover:text-gray-500 dark:text-gray-400' width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
                 <path d='M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5' stroke='currentColor' stroke-width='2' stroke-linecap='round' />
               </svg>
