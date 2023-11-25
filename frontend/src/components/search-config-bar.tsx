@@ -1,7 +1,7 @@
 import { Component } from 'solid-js'
 import './styles/main.css'
 
-const ListVideoBox: Component<{}> = (props) => {
+const SearchConfigBar: Component<{}> = (props) => {
   return (
     <div class='ml-10 mt-10 w-full h-50 flex flex-col bg-[#F2F2F2] border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]'>
       <div class='p-4 md:p-5 m-2 flex flex-col gap-2'>
@@ -27,7 +27,7 @@ const ListVideoBox: Component<{}> = (props) => {
 
               <div class='border-t sm:border-t-0 sm:border-s border-gray-200 w-32 h-[60%] m-2' />
 
-              <svg class='flex-shrink-0 h-[1.6rem] w-[1.6rem] text-gray-400 ml-[12rem]' xmlns='http://www.w3.org/2000/svg' width='33' height='33' viewBox='0 0 33 33' fill='none'>
+              <svg class='flex-shrink-0 h-[1.6rem] w-[1.6rem] text-gray-400 ml-[10rem]' xmlns='http://www.w3.org/2000/svg' width='33' height='33' viewBox='0 0 33 33' fill='none'>
                 <path d='M12.3748 0C5.54081 0 0 5.54229 0 12.3757C0 19.209 5.54081 24.7504 12.3748 24.7504C19.2087 24.7504 24.7504 19.209 24.7504 12.3757C24.7504 5.54229 19.2087 0 12.3748 0ZM12.3748 3.09347C17.4928 3.09347 21.6561 7.25758 21.6561 12.3757C21.6561 17.4931 17.4928 21.6561 12.3748 21.6561C7.25669 21.6561 3.09347 17.4931 3.09347 12.3757C3.09347 7.25758 7.25669 3.09347 12.3748 3.09347ZM12.3748 5.15608C8.39498 5.15608 5.15608 8.39466 5.15608 12.3757H7.21869C7.21869 9.53235 9.53207 7.21957 12.3748 7.21957V5.15608ZM24.5223 20.1469C23.3943 21.902 21.9023 23.3952 20.1478 24.5232L27.7192 32.0938C28.9275 33.3021 30.8879 33.3021 32.0938 32.0938C33.3021 30.8879 33.3021 28.9287 32.0938 27.7192L24.5223 20.1469Z' fill='#E36E40' />
               </svg>
 
@@ -55,4 +55,4 @@ const ListVideoBox: Component<{}> = (props) => {
   )
 }
 
-export default ListVideoBox
+export default SearchConfigBar
