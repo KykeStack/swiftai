@@ -4,6 +4,7 @@ import VideoRealTime from './video-real-time'
 import CarouselScreenshots from './carousel-screenshots'
 import VideoPreviewBox from './video-preview-box'
 import DataSection from './data-section'
+import ProfileButton from './profile-button'
 
 const Body: Component<{}> = (props) => {
   return (
@@ -14,7 +15,8 @@ const Body: Component<{}> = (props) => {
         <VideoRealTime />
         <CarouselScreenshots />
       </div>
-      <div class='h-fit w-[40rem]'>
+      <div class='h-fit w-[40rem] relative'>
+        <ProfileButton />
         <VideoPreviewBox />
         <DataSection />
       </div>
